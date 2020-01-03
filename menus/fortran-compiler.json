@@ -1,0 +1,44 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+        {   "type": "separator" },
+        {
+            "label": "Compile Fortran Project",
+            "command": "fortran-compiler:run"
+        },
+        {   "type": "separator" }
+    ],
+    ".tree-view .project-root-header:not(.active-fproject)": [
+        {   "type": "separator" },
+        {
+            "label": "Make Active Fortran Project",
+            "command": "fortran-compiler:make-active"
+        },
+        {   "type": "separator" }
+    ],
+    ".tree-view .active-fproject": [
+        {   "type": "separator" },
+        {
+            "label": "Remove Active Fortran Project Status",
+            "command": "fortran-compiler:remove-active"
+        },
+        {   "type": "separator" }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "fortran-compiler",
+          "submenu": [
+            {
+              "label": "Compile",
+              "command": "fortran-compiler:run"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
