@@ -8,3 +8,53 @@
     line-height: 2.5em;
     float: right;
 }
+
+@separation: 20px;
+
+.fconsole-container{
+    .fconsole-header{
+        display: flex;
+        padding-left: @separation;
+        line-height: 27px;
+        font-size: 10pt;
+        cursor: move;
+
+        .icon{
+            line-height: 30px;
+        }
+
+        .fconsole-pretitle{
+            margin-right: 7px;
+        }
+    }
+
+    .fconsole-output{
+        background-color: @input-background-color;
+        height: 0;
+        padding-left: @separation;
+        max-height: 200px;
+        overflow: hidden;
+
+        @infoHeight: 26px;
+
+        .fconsole-stdout{
+            height: calc(~"100%" - @infoHeight);
+            padding-top: 5px;
+            padding-left: 7px;
+            overflow: auto;
+
+            .fconsole-stdout-line{
+                white-space: pre;
+                line-height: 18px;
+            }
+        }
+
+        .fconsole-info{
+            line-height: @infoHeight;
+        }
+    }
+}
+
+.fconsole-output-t{
+    transition: height 0.1s;
+}
