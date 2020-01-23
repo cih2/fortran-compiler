@@ -1,16 +1,26 @@
 {
-  "name": "fortran-compiler",
-  "main": "./lib/fortran-compiler",
-  "version": "1.2.0",
-  "description": "A little package for compile fortran files.",
-  "keywords": [],
-  "repository": "https://github.com/cih2/fortran-compiler",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "dependencies": {
-    "jquery": "^3.4.1",
-    "n-readlines": "^1.0.0"
-  }
+    "name": "fortran-compiler",
+    "main": "./lib/fortran-compiler",
+    "version": "1.2.0",
+    "description": "A little package for compile fortran files.",
+    "keywords": [],
+    "repository": "https://github.com/cih2/fortran-compiler",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "dependencies": {
+        "jquery": "^3.4.1",
+        "n-readlines": "^1.0.0"
+    },
+    "package-deps": [
+        "tool-bar"
+    ],
+    "consumedServices": {
+        "tool-bar": {
+            "versions": {
+                "^0 || ^1": "consumeToolBar"
+            }
+        }
+    }
 }

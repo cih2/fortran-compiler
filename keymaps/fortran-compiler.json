@@ -1,5 +1,7 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "fortran-compiler:run"
+    "ctrl-f5": "fortran-compiler:rebuild",
+    "ctrl-f6": "fortran-compiler:build",
+    "ctrl-f7": "fortran-compiler:run"
   }
 }

@@ -14,17 +14,46 @@
 .fconsole-container{
     .fconsole-header{
         display: flex;
+        justify-content: space-between;
         padding-left: @separation;
+        padding-right: @separation;
         line-height: 27px;
         font-size: 10pt;
         cursor: move;
+        align-items: center;
 
-        .icon{
-            line-height: 30px;
+        .fconsole-title{
+            display: flex;
+
+            .icon{
+                line-height: 30px;
+            }
+
+            .fconsole-pretitle{
+                margin-right: 7px;
+            }
         }
 
-        .fconsole-pretitle{
-            margin-right: 7px;
+        .fconsole-clear-button{
+            width: 45px;
+            line-height: 20px;
+            font-size: 11px;
+            background-color: @button-background-color;
+            border: 1px solid @button-border-color;
+            border-radius: @component-border-radius;
+            text-align: center;
+            transition: all 0.12s;
+
+            &:hover{
+                color: @text-color-highlight;
+                background-color: @button-background-color-hover;
+                cursor: pointer;
+            }
+
+            &:active{
+                box-shadow: 0 0 3px 0px @button-background-color-selected;
+                border-color: @button-background-color-selected;
+            }
         }
     }
 
@@ -50,6 +79,7 @@
         }
 
         .fconsole-info{
+            white-space: pre;
             line-height: @infoHeight;
         }
     }

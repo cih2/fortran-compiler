@@ -7,7 +7,15 @@
           "label": "fortran-compiler",
           "submenu": [
             {
-              "label": "Compile Fortran Project",
+              "label": "Compile And Run Fortran Project",
+              "command": "fortran-compiler:build"
+            },
+            {
+              "label": "Rebuild Active Project",
+              "command": "fortran-compiler:rebuild"
+            },
+            {
+              "label": "Run Project",
               "command": "fortran-compiler:run"
             },
             {
@@ -24,7 +32,7 @@
           {   "type": "separator" },
           {
               "label": "Compile Fortran Project",
-              "command": "fortran-compiler:run"
+              "command": "fortran-compiler:build"
           },
           {   "type": "separator" }
       ],
