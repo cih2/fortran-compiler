@@ -19,6 +19,10 @@
               "command": "fortran-compiler:run"
             },
             {
+              "label": "Stop Program",
+              "command": "fortran-compiler:stop"
+            },
+            {
               "label": "Toggle Console",
               "command": "fconsole:toggle"
             }

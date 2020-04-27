@@ -2,6 +2,7 @@
   "atom-workspace": {
     "ctrl-f5": "fortran-compiler:rebuild",
     "ctrl-f6": "fortran-compiler:build",
-    "ctrl-f7": "fortran-compiler:run"
+    "ctrl-f7": "fortran-compiler:run",
+    "ctrl-f8": "fortran-compiler:stop"
   }
 }
