@@ -25,7 +25,7 @@
             display: flex;
 
             .fconsole-tab{
-                width: 120px;
+                width: 110px;
                 display: flex;
                 justify-content: center;
                 border-right: 1px solid #1b1d23;
@@ -184,6 +184,19 @@
         overflow: hidden;
 
         @infoHeight: 26px;
+
+        .fconsole-stdin{
+            width: calc(~"100%" - @separation);
+            height: calc(~"100%" - calc(@infoHeight + 5px));
+            margin-top: 5px;
+            padding-left: 7px;
+            overflow-y: scroll;
+            // background-color: transparent;
+
+            .scrollbar-corner{
+                // opacity: 0
+            }
+        }
 
         .fconsole-stdout{
             height: calc(~"100%" - calc(@infoHeight + 5px));
