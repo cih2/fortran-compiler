@@ -12,6 +12,11 @@
 @separation: 20px;
 
 .fconsole-container{
+    .fconsole-resize{
+        height: 5px;
+        top: -3px !important;
+    }
+
     .fconsole-header{
         display: flex;
         justify-content: space-between;
@@ -87,7 +92,7 @@
                         border: 1px solid #1b1d23;
                         transition: all 0.2s;
 
-                        &:hover:not(.fdeactived){
+                        &:hover:not(.fdeactivated){
                             color: #ddd;
                             cursor: pointer;
                             transition: all 0.2s;
@@ -110,7 +115,7 @@
                         border-radius: 0 0 50% 50%;
                     }
 
-                    .fdeactived{
+                    .fdeactivated{
                         opacity: 0.40;
                         pointer-events: none;
                     }
@@ -118,14 +123,22 @@
             }
         }
 
-        .icon{
-            // margin-right: 6px;
+        .fmark{
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-right: 15px;
+            transition: background-color 0.2s, box-shadow 0.2s;
         }
 
-        .fconsole-resize{
-            height: 22px;
-            cursor: move;
-            flex-grow: 2;
+        .fstatus-stopped{
+            background-color: #ff2d0e;
+            box-shadow: #ff0000b8 0 0 9px 1px;
+        }
+
+        .fstatus-running{
+            background-color: #41ff9e;
+            box-shadow: #00ff00b8 0 0 9px 1px;
         }
 
         .fconsole-toolbar{
@@ -134,6 +147,7 @@
             padding: 0 5px;
             display: flex;
             border-right: 1px solid @pane-item-border-color;
+
 
             .ftool-btn{
                 width: 22px;
@@ -166,6 +180,8 @@
         .fconsole-title{
             align-items: center;
             display: flex;
+            cursor: default;
+            flex-grow: 2;
 
             .loading{
                 display: none;
@@ -182,8 +198,14 @@
         padding-left: @separation;
         max-height: 400px;
         overflow: hidden;
+        position: relative;
 
         @infoHeight: 26px;
+
+        .fhidden{
+            position: absolute;
+            top: -9999px;
+        }
 
         .fconsole-stdin{
             width: calc(~"100%" - @separation);
@@ -191,10 +213,14 @@
             margin-top: 5px;
             padding-left: 7px;
             overflow-y: scroll;
-            // background-color: transparent;
+            border-radius: 10px;
 
             .scrollbar-corner{
                 // opacity: 0
+            }
+
+            &::-webkit-scrollbar-track{
+                border-radius: 0 10px 10px 0;
             }
         }
 
@@ -221,9 +247,9 @@
             }
         }
 
-        .fconsole-compiler{
-            display: none;
-        }
+        // .fconsole-compiler{
+        //     display: none;
+        // }
 
         .fconsole-info{
             white-space: pre;
@@ -270,3 +296,15 @@
         }
     }
 }
+
+.resize-icon{
+    cursor: row-resize;
+}
+
+// width: 100%;
+// height: 5px;
+// background: transparent;
+// position: absolute;
+// left: 0;
+// top: -4px;
+// cursor: row-resize;
