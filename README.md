@@ -9,9 +9,9 @@ To compile press <kbd>ctrl</kbd> + <kbd>F5</kbd> or use the buttons in the conso
 * [ide-fortran](https://atom.io/packages/ide-fortran)
 * [language-fortran](https://atom.io/packages/language-fortran)
 
-    ###### Note: some of these packages may need dependencies
+    ###### * Note: some of these packages may need dependencies
 
-## Dependencies
+## Requirements
 
 This package relies on a Fortran compiler (gfortran).
 
@@ -34,3 +34,24 @@ You'll need to install [MinGW](http://www.mingw.org/) and [add it to your PATH](
 ### Mac
 
 You'll need to install [XCode](https://developer.apple.com/xcode/).
+
+## Usage
+
+Right click on the desired project folder and choose "Select as active project"
+![select-project](https://raw.githubusercontent.com/cih2/fortran-compiler/master/images/selection.gif)
+
+## Features
+
+#### Toolbar
+![toolbar](https://raw.githubusercontent.com/cih2/fortran-compiler/master/images/toolbar.png)
+
+#### Standard Input
+![input](https://raw.githubusercontent.com/cih2/fortran-compiler/master/images/stdin.png)
+#### Standard Output
+![input](https://raw.githubusercontent.com/cih2/fortran-compiler/master/images/stdout.png)
+#### Compiler Log
+![log](https://raw.githubusercontent.com/cih2/fortran-compiler/master/images/log.png)
+
+This package has been tested and *should* work on macOS (OS X), Linux and Windows.
+## License
+MIT License. See [the license](LICENSE.md) for more details.
