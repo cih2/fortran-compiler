@@ -43,7 +43,7 @@
       ".tree-view .project-root-header:not(.active-fproject)": [
           {   "type": "separator" },
           {
-              "label": "Make Active Fortran Project",
+              "label": "Select as Active Project",
               "command": "fortran-compiler:make-active"
           },
           {   "type": "separator" }
@@ -51,7 +51,7 @@
       ".tree-view .active-fproject": [
           {   "type": "separator" },
           {
-              "label": "Remove Active Fortran Project Status",
+              "label": "Remove Active Status",
               "command": "fortran-compiler:remove-active"
           },
           {   "type": "separator" }
